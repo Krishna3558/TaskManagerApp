@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 import React from 'react'
-import Navbar from '../Components/navbar'
+import Navbar from '../Components/Navbar'
 import LastTaks from '../Components/LastTaks';
 import AddTask from '../Components/AddTask';
 import { useTask } from '../context/task';
