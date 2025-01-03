@@ -1,5 +1,5 @@
 export const fetchTask = async(UserId) => {
-    const response = await fetch(`http://localhost:5000/api/tasks/gettask/${UserId}` , {
+    const response = await fetch(`https://taskmanagerappbackend-8tb9.onrender.com/api/tasks/gettask/${UserId}` , {
         method: "GET",
         headers: {
             "Content-Type" : "application/json"   
@@ -20,7 +20,7 @@ export const addTask = async(task) => {
         throw new Error("No userid");
     }
     const taskWithUserId = { ...task, UserId: userId };
-    const response = await fetch("http://localhost:5000/api/tasks/addtask" , {
+    const response = await fetch("https://taskmanagerappbackend-8tb9.onrender.com/api/tasks/addtask" , {
         method: "POST",
         headers: {
             "Content-Type" : "application/json"
@@ -43,7 +43,7 @@ export const updateTask = async (id, updatedTask) => {
 
     console.log("Updating Task ID:", id);
 
-    const response = await fetch(`http://localhost:5000/api/tasks/updatetask/${id}`, {
+    const response = await fetch(`https://taskmanagerappbackend-8tb9.onrender.com/api/tasks/updatetask/${id}`, {
         method: "PUT",
         headers: {
             "Content-Type": "application/json"
@@ -61,7 +61,7 @@ export const updateTask = async (id, updatedTask) => {
 
 
 export const deleteTask = async(id) => {
-    const response = await fetch(`http://localhost:5000/api/tasks/removetask/${id}` , {
+    const response = await fetch(`https://taskmanagerappbackend-8tb9.onrender.com/api/tasks/removetask/${id}` , {
         method: "DELETE",
         headers: {
             "Content-Type" : "application/json"
